@@ -47,12 +47,22 @@ bool Engine::Initialize()
 	{
 		return false;
 	}
-	_GUI = new GUISystem;;
+	_GUI = new GUISystem;
 	if(!_GUI)
 	{
 		return false;
 	}
 	result = _GUI->Initialize(screenWidth, screenHeight);
+
+	_Sound = new SoundSystem;
+	if(!_Sound)
+	{
+		return false;
+	}
+	result = _Sound->Initialize();
+
+	_Sound->createSound(&soundSample, "Assets/music.mp3");
+	_Sound->playSound(soundSample, true);
 
 	return true;
 }
@@ -175,6 +185,8 @@ void Engine::Shutdown()
 		delete _Input;
 		_Input = 0;
 	}
+
+	_Sound->releaseSound(soundSample);
 
 	UnregisterClass(applicationName, hInstance);
 	hInstance = NULL;

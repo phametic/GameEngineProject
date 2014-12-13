@@ -8,6 +8,7 @@
 #include "GraphicSystems.h"
 #include "InputSystem.h"
 #include "GUISystem.h"
+#include "SoundSystem.h"
 
 #define SCREEN_WIDTH  800
 #define SCREEN_HEIGHT 600
@@ -36,6 +37,9 @@ private:
 	GraphicSystems* _Graphics;
 	InputSystem* _Input;
 	GUISystem* _GUI;
+	SoundSystem* _Sound;
+
+	SoundClass soundSample;
 };
 
 	// the WindowProc function prototype

@@ -39,8 +39,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(DXSDK_DIR)include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(DXSDK_DIR)lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(DXSDK_DIR)include;C:\Users\Ram\Desktop\GameEngineProject\GameEngineProject\GameEngineProject\FMOD Studio API Windows\api\lowlevel\inc;C:\Users\Ram\Desktop\GameEngineProject\GameEngineProject\GameEngineProject\FMOD Studio API Windows\api\studio\inc;C:\Users\Ram\Desktop\GameEngineProject\GameEngineProject\GameEngineProject\FMOD Studio API Windows\api\fsbank\inc;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(DXSDK_DIR)lib\x86;C:\Users\Ram\Desktop\GameEngineProject\GameEngineProject\GameEngineProject\FMOD Studio API Windows\api\lowlevel\lib;C:\Users\Ram\Desktop\GameEngineProject\GameEngineProject\GameEngineProject\FMOD Studio API Windows\api\studio\lib;C:\Users\Ram\Desktop\GameEngineProject\GameEngineProject\GameEngineProject\FMOD Studio API Windows\api\fsbank\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -51,7 +51,7 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>dxgi.lib;d3dx11.lib;d3d11.lib;d3dcompiler.lib;dinput8.lib;dxguid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>dxgi.lib;d3dx11.lib;d3d11.lib;d3dcompiler.lib;dinput8.lib;dxguid.lib;fmod_vc.lib;fmod64_vc.lib;fmodL_vc.lib;fmodL64_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -77,6 +77,7 @@
     <ClCompile Include="GUISystem.cpp" />
     <ClCompile Include="InputSystem.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="SoundSystem.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="D3DRenderer.h" />
@@ -89,6 +90,7 @@
     <ClInclude Include="GUISystem.h" />
     <ClInclude Include="IGUIElement.h" />
     <ClInclude Include="InputSystem.h" />
+    <ClInclude Include="SoundSystem.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
