@@ -21,7 +21,7 @@ public:
 	GUISystem(const GUISystem&);
 	~GUISystem();
 
-	bool Initialize(D3DRenderer* _D3D, float screenWidth, float screenHeight);
+	bool Initialize(float screenWidth, float screenHeight);
 	void Shutdown();
 	bool Frame();
 	void Update(float deltaTime);

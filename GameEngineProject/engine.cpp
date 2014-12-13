@@ -47,6 +47,12 @@ bool Engine::Initialize()
 	{
 		return false;
 	}
+	_GUI = new GUISystem;;
+	if(!_GUI)
+	{
+		return false;
+	}
+	result = _GUI->Initialize(screenWidth, screenHeight);
 
 	return true;
 }

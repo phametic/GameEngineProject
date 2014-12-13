@@ -1,5 +1,5 @@
 #ifndef D3DRENDERER_H
-#define D3DRENDERDER_H
+#define D3DRENDERER_H
 
 #include <dxgi.h>
 #include <d3dcommon.h>

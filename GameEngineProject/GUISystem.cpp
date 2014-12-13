@@ -96,10 +96,8 @@ void GUISystem::AddText(std::string text, std::string font, Vector2 pos, Vector4
 	_text.push_back(guiText);
 }
 
-bool GUISystem::Initialize(D3DRenderer* D3D, float screenWidth, float screenHeight)
+bool GUISystem::Initialize(float screenWidth, float screenHeight)
 {
-	_D3D = D3D;
-
 	_screenWidth = screenWidth;
 	_screenHeight = screenHeight;
 	return true;

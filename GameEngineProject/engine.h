@@ -7,6 +7,7 @@
 #include <windowsx.h>
 #include "GraphicSystems.h"
 #include "InputSystem.h"
+#include "GUISystem.h"
 
 #define SCREEN_WIDTH  800
 #define SCREEN_HEIGHT 600
@@ -34,6 +35,7 @@ private:
 
 	GraphicSystems* _Graphics;
 	InputSystem* _Input;
+	GUISystem* _GUI;
 };
 
 	// the WindowProc function prototype
